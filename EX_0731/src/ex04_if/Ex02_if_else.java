@@ -54,6 +54,34 @@ public class Ex02_if_else {
 			
 			//삼항연산자로 만들었던 X 개의 농구공을 담기위한 박스의 개수 구하기를 조건문으로 만들기
 			
+			/*int ball = 23 ;
+			int n = 5 ;
+			int box = 0 ;
+			//int result = ball % n ==0 ? ball / n : ball / n+1;
+			
+			if(ball % n ==0 ) { 
+				box = ball /n;
+			}else {
+				box = ball / n+1 ;
+			}
+			
+			System.out.println("필요한 박수의 개수 : " + box );
+			*/
+			System.out.print("공의 개수 입력:");
+			int ball = sc.nextInt(); // 소문자로시작하는단어 뒤 소괄호= 기능이있는 함수 .
+			int n = 5 ;
+			int box = 0 ;
+			//int result = ball % n ==0 ? ball / n : ball / n+1;
+			
+			if(ball % n ==0 ) { 
+				box = ball /n;
+			}else {
+				box = ball / n+1 ;
+			}
+			
+			System.out.println("필요한 박수의 개수 : " + box );
+			
+			
 	}
 }
 
