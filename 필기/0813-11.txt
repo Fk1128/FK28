@@ -71,7 +71,7 @@ List 컬렉션
 	int size()			크기		저장된 데이터의 개수반환
 	boolean contains(Object o)	검색		데이터 존재 여부 확인
 	
-ArrauList
+ArrayList
 	- ArrayList는 가장 많이 사용하는 List인터페이스의 대표적인 구현 클래스이다.
 	- JDK 1.2부터 제공된 ArrayList는 내부적으로 배열을 이용해 구현되어 배열과의 호환성이 좋은 자료구조이다.
 	
@@ -132,6 +132,76 @@ Iterrator (반복자)
 	E next()		다음 위치의 데이터로 이동하여 반환
 
 
+
+------------------------------------------------------------------------------
+0814 오전정리
+
+컬렉션 프레임워크 
+
+List set map - interface (상수 ,추상메서드 ) (바로 객체생성 X ) 
+구현한클래스
+List		  set	    Map
+ArrayList		HashSet	 HashMap
+LinkedList
+Vector 
+
+
+List
+- 요소를 계속 넣을수 있음 
+- index 가 존재한다 .
+- 중복된 데이터 허용
+				
+add(E e ) - > 맨뒤에 추가
+add(int index, E e ) - > 원하는 위치에 추가 
+set(int index, E e) - > 원하는 위치 수정
+remove (int index)
+remove (Object obj)
+removeAll(Collection c) 삭제 후 true ,false 반환
+clear () 삭제후 반환값x
+
+LinkedList
+node객체
+
+
+
+
+ArrayList vs LinkedList
+ArrayList -> 조회가 많은곳
+LinkedList -> 추가,삭제가 빈번하게 일어나는곳  
+
+
+제네릭 
+- 타입을 미리 지정하는것이 아닌 객체가 만들어질때 타입을 설정하는것
+- 타입을 파라미터(매개변수)로 가지는 클래스와 인터페이스 
+public class 클래스명 <T> {
+
+
+}
+<T> = 타입 매개변수 
+
+
+public interface 인터페스명 <T> {
+
+}
+
+
+HashSet
+- 중복허용 X
+- 순서대로 저장된다는 보장이 없음 
+-
+add()
+remove() 
+
+특정 객체가 컬렉션에 들어있냐
+contains(Object obj) -T or F 반환
+
+
+Iterator
+반복자
+컬렉션 요소를 순회하여 하나씩 추출하는 방식
+생성한 List . Set 객체를 통해 iterator() 메서드를 통해서 객체를 생성한다 .
+
+Iterator<Integer> iter = list.iterator();
 
 
 
