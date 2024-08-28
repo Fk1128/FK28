@@ -132,23 +132,35 @@ SELECT TO_DATE('08.27.2024','MM,DD,YYYY') FROM DUAL;
 SELECT TO_DATE('2024.08','YYYY.MM')FROM DUAL; -- 월까지만 입력시 자동으로 1일로출력
 
 
---NULL 처리 함수
---NULL 값을 다른 값으로 변경
+-- NULL 처리함수
+-- NULL값을 다른값으로 변경
 
---함수		기능
---NVL()		NULL값 대신 다른 값으로 변경 후 검색
---NVL2()		NULL일 때의 값, NULL이 아닐 때의 값을 각각 설정
---NULLIF()	두 인자 값을 비교, 같으면 NULL을 반환, 다르면 첫번째 인자 값을 반환
+-- NVL()
+SELECT EMPLOYEE_ID,FIRST_NAME,SALARY,COMMISSION_PCT
+FROM EMPLOYEES WHERE COMMISSION_PCT IS NULL;
 
+SELECT EMPLOYEE_ID,FIRST_NAME,SALARY,NVL(COMMISSION_PCT,0)
+FROM EMPLOYEES WHERE COMMISSION_PCT IS NULL;
 
--- 두 컬럼에 대해서 비교할 수 있다.
-SELECT NULLIF(SALARY ,EMPLOYEE_ID)
-FROM EMPLOYEES e ;
+--NVL2()
+-- NULL일 때 치환할 값, NULL이 아닐 때 치환할 값
+SELECT EMPLOYEE_ID,FIRST_NAME,SALARY,NVL2(COMMISSION_PCT,'보너스 받음','보너스 안받음')
+FROM EMPLOYEES;
+a
+-- 순위 함수
+-- RANK() OVER()
+-- 그룹 내 순위를 계산하여 NUMBER타입으로 순위를 반환
+SELECT RANK() OVER(ORDER BY SALARY DESC), FIRST_NAME, SALARY
+FROM EMPLOYEES;
 
+-- DENSE_RANK()
+SELECT DENSE_RANK() OVER(ORDER BY SALARY DESC), FIRST_NAME, SALARY
+FROM EMPLOYEES;
 
-
-
-
+-- 집계함수
+-- 여러 행들에 대한 연산 결과를 하나의 행으로 반환
+-- 집계함수는 null을 체크하지 않는다.
+-- 평균을 구할 때 내가 원하는 값과는 다른 결과 나올수 있다.
 
 
 -- COUNT ()
