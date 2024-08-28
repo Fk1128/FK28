@@ -127,8 +127,76 @@ SUBQUERY
 
 
 
+------------------------------------------
+0827 정리
+
+숫자함수
+일반 컬럼과 함께 사용하는 것이 가능
+
+집계함수
+일반 컬럼과 함께 사용하는 것이 불가능 .
+SUM() 합계
+AVG() 평균
+MAX() 최대값 
+MIN() 최소값
+COUNT() - 행의개수
+STDDEV - > 표준편차 구하기
+VARIANCE - > 분산 
+
+그룹화 
+소그룹으로 분류해서 집계를 내주는것.
+~별로 집계
+
+GROUP BY 절
+그룹화에 사용된 일반컬럼은 SELECT 절에서 사용할 수 있다 .
 
 
+HAVING절
+집계함수에 대한 조건을 걸어야할 때 사용
+
+WHERE 과의 차이 
+
+WHERE은 테이블에서 데이터를 조회한 후 조건을 적용
+HAVING은 그룹별로 조회를 한 후 조건을 적용 
+
+DCL (데이터 제어어)
+DB에 접근하고 객체들을 사용하도록 권한을 주고 회수하는 명령어
+
+GRANT 권한부여
+REVOKE 권한강탈
+
+데이터베이스에 들어있는 모든 유저를 검색하는 방법
+SELECT USERNAME FROM DBA_USERS;
+
+권한주기
+GRANT 권한 TO USER
+
+테이블스페이스
+
+테이블을 만들고 , 데이터를 저장하는 물리적 공간
+
+
+CREATE TAMBLESPACE 테이블스페이스명 DATAFILE '경로와 이름' SIZE 크기 AUTOEXTEND ON NEXT 크기 (MAXSIZE 크기 
+
+
+권환강탈
+
+REVOKE 권한 FROM USER ;
+
+INDEX - 색인같은?
+테이블 내 데이터를 빠르게 조회할 수 있도록하는 데이터구조 
+
+규모가 크고, 수정이 빈번하게 일어나지 않는 테이블에 적합하다 .
+
+
+SUBQUERY
+서브쿼리 
+SQL문안에 SQL문이 있는것
+
+WHERE HAVING -> 특정값처럼 사용
+SELECT DELETE문의 FROM절 -> 테이블처럼사용
+UPDATE문의 SET
+INSERT 문의 INTO
 
 
 
