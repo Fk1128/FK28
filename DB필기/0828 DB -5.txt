@@ -160,12 +160,21 @@ ROLLBACK TO 저장점명 ;
 
 
 
+0829 오전정리
+SUBQUERY
+FROM절 : IN LINE VIEW  테이블처럼 사용
+SELECT절  SCALAR: 컬럼처럼 사용
+WHERE : SUB QUERY 값 , 표현식처럼 사용
+
+JOIN
+두개 이상의 테이블을 연결하여 하나의 결과를 반환하는테이블로 만드는것 
 
 
+1-1 . SELF INNER JOIN
+하나의 테이블에서 서로다른 컬럼을 참조하는것
 
-
-
-
+1-2 CROSS INNER JOIN
+모든 가능한 조합을 만들어 반환하는 JOIN방법 
 
 
 
